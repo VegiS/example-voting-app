@@ -4,7 +4,7 @@ FROM python:2.7
 # Set the application directory
 WORKDIR /app
 
-# Install our requirements.txt
+# Install our requirements.txt for python
 ADD requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
 
@@ -12,7 +12,7 @@ RUN pip install -r requirements.txt
 ADD . /app
 
 # Make port 5000 available for links and/or publish
-EXPOSE 80 
+EXPOSE 80
 
 # Define our command to be run when launching the container
-CMD ["python", "app.py"] 
+CMD ["python", "app.py"]
